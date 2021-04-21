@@ -1,4 +1,4 @@
-import { Flex, SimpleGrid, Text, Box } from "@chakra-ui/react";
+import { SimpleGrid, Text, Box } from "@chakra-ui/react";
 
 import { GetStaticPaths, GetStaticProps } from "next";
 import { Header } from "../components/Header";
@@ -43,19 +43,24 @@ export default function Nation({ nation }: NationProps) {
         align="center"
         maxW={1140}
         columns={[1, 1, 2]}
-        gap={["8", "8", "16"]}
-        mt={["4", "4", "12"]}
-        p={["6", "6", "8"]}
+        gap={["4", "8", "16"]}
+        mt={["2", "4", "12"]}
+        p={["4", "6", "8"]}
       >
         <NationDescription description={nation.description} />
         <NationMetricsInfo
           num_countries={nation.num_countries}
           num_languages={nation.num_languages}
           num_city_most_visited={nation.num_city_most_visited}
+          country={nation.title}
         />
       </SimpleGrid>
-      <Box w="100%" mx="auto" maxW={1140} p={["6", "6", "8"]}>
-        <Text fontSize="3xl" fontWeight={500} color="dark.headings-text">
+      <Box w="100%" mx="auto" maxW={1140} p={["4", "6", "8"]}>
+        <Text
+          fontSize={["2xl", "3xl"]}
+          fontWeight={500}
+          color="dark.headings-text"
+        >
           Cidades +100
         </Text>
       </Box>
@@ -64,8 +69,9 @@ export default function Nation({ nation }: NationProps) {
         mx="auto"
         maxW={1160}
         columns={[1, 1, 4]}
-        spacing="45px"
-        p={["6", "6", "8"]}
+        spacing={["5", "45px"]}
+        px={["6", "6", "8"]}
+        mb="8"
       >
         {nation.cities_100.map((cities) => (
           <CityCard

@@ -8,9 +8,9 @@ export function NationDescription({ description }: NationDescriptionProps) {
     <Box>
       <Text
         textAlign="justify"
-        color="dark.black"
-        fontSize="xl"
-        mb={["2", "2", "4"]}
+        color={["dark.headings-text", "dark.black"]}
+        fontSize={["sm", "xl"]}
+        mb={["1", "4"]}
       >
         {description}
       </Text>

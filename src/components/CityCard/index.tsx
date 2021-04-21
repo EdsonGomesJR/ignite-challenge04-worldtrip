@@ -10,7 +10,7 @@ interface CityCardProps {
 
 export function CityCard(props: CityCardProps) {
   return (
-    <Box w="64">
+    <Box mx="auto" w="64">
       <Flex
         borderRadius="4px 4px 0 0"
         w="100%"

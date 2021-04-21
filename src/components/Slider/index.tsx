@@ -1,5 +1,4 @@
-import { Box, Text, Flex, Heading, Image, Stack } from "@chakra-ui/react";
-import { theme } from "../../styles/theme";
+import { Text, Flex, Heading, Stack } from "@chakra-ui/react";
 import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -34,55 +33,13 @@ export function Slider() {
     "O continente mais antigo",
     "Natureza sem igual",
     "Culturas milenares",
-    "Aventuras de tirar o folegô",
+    "Aventuras de tirar o folego",
     "As Praias mais bonitas",
     "Turistar a vontade",
   ];
   const slides = [];
   for (let i = 0; i < nameImagesAndLinks.length; i++) {
-    slides.push(
-      i
-      // <SwiperSlide key={nameImagesAndLinks[i]}>
-      //   <Image
-      //     src={`./SliderImages/${nameImagesAndLinks[i]}.jpg`}
-      //     alt={`${nameImagesAndLinks[i]}`}
-      //     width="100%"
-      //     height="100%"
-      //     objectFit="cover"
-      //   />
-
-      //   <Flex
-      //     color={theme.colors.light.headingsText}
-      //     position="absolute"
-      //     top="0"
-      //     right="0"
-      //     width="100%"
-      //     height="100%"
-      //     alignItems="center"
-      //     justifyContent="center"
-      //   >
-      //     <Link
-      //       href={`/${nameImagesAndLinks[i]}`}
-      //       transitionDuration="0.2s"
-      //       _hover={{ filter: "brightness(0.8)" }}
-      //       _active={{ filter: "brightness(0.5)" }}
-      //     >
-      //       <Stack
-      //         alignItems="center"
-      //         textShadow="0 0 3px black, 0 0 5px black"
-      //         textAlign="center"
-      //       >
-      //         <Heading as="h1" fontSize="3rem" mb="1rem">
-      //           {headingH1[i]}
-      //         </Heading>
-      //         <Heading as="h2" fontSize="1.5rem">
-      //           {headingH2[i]}
-      //         </Heading>
-      //       </Stack>
-      //     </Link>
-      //   </Flex>
-      // </SwiperSlide>
-    );
+    slides.push(i);
   }
 
   return (

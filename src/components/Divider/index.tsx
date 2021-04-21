@@ -3,12 +3,11 @@ import { Box } from "@chakra-ui/layout";
 export function Divider() {
   return (
     <Box
-      w="90px"
+      w={["60px", "90px"]}
       mx="auto"
-      border="2px solid"
-      borderColor="dark.black"
-      background="dark.black"
-      my="20"
+      border={["1px solid", "2px solid"]}
+      borderColor={["dark.headings-text", "dark.black"]}
+      my={["6", "20"]}
     />
   );
 }
