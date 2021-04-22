@@ -64,7 +64,7 @@ export function NationMetricsInfo(props: NationMetricsProps) {
           línguas
         </Text>
       </Box>
-      <Box mr={["1.6rem", "2.6rem"]}>
+      <Box mr={["1rem", "2.6rem"]}>
         <Text
           fontSize={["2rem", "3rem"]}
           fontWeight="600"
