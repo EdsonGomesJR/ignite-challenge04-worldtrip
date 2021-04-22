@@ -7,6 +7,7 @@ import { NationMetricsInfo } from "../components/NationMetricsInfo";
 import { NationDescription } from "../components/NationDescription";
 import { CityCard } from "../components/CityCard";
 import Head from "next/head";
+import data from "../data.json";
 interface Nation {
   id: number;
   name: string;
@@ -89,8 +90,12 @@ export default function Nation({ nation }: NationProps) {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { nation } = context.params;
-  const request = await fetch("http://localhost:3000/api/get");
-  const json = await request.json();
+  // const request = await fetch("http://localhost:3000/api/get");
+  // console.log("data => ", data);
+
+  // const json = await request.json();
+
+  const json = data;
 
   let data_filter = json.filter((element) => element.name === nation);
 
@@ -103,8 +108,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const request = await fetch("http://localhost:3000/api/get");
-  const json = await request.json();
+  // const request = await fetch("http://localhost:3000/api/get");
+
+  // const json = await request.json();
+  const json = data;
+
   let allPaths = [];
   for (let data of json) {
     allPaths.push(data.name);
